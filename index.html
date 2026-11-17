@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#172554" />
+    <meta name="description" content="A simple, type-safe task tracker." />
+    <title>Daymark — Task Tracker</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" src="app.js"></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="hero">
+        <div class="brand-mark" aria-hidden="true">D</div>
+        <p class="eyebrow">A LITTLE MORE FOCUS</p>
+        <h1>Make today <span>count.</span></h1>
+        <p class="hero-copy">A calm space to capture your tasks and move them forward.</p>
+      </header>
+
+      <section class="workspace" aria-label="Task manager">
+        <form class="add-form" onsubmit="return false">
+          <label class="visually-hidden" for="title">New task title</label>
+          <input id="title" name="title" type="text" maxlength="100"
+                 placeholder="What needs your attention?" autocomplete="off" />
+          <button id="add-task" class="add-button" type="button">Add task <span aria-hidden="true">＋</span></button>
+        </form>
+
+        <div class="list-heading">
+          <div>
+            <p class="eyebrow">YOUR WORKSPACE</p>
+            <h2>Tasks <span id="task-count" class="task-count">0 tasks</span></h2>
+          </div>
+        </div>
+
+        <nav class="filters" aria-label="Filter tasks">
+          <button type="button" data-filter="all" class="filter-button active" aria-pressed="true">All</button>
+          <button type="button" data-filter="todo" class="filter-button" aria-pressed="false">To do</button>
+          <button type="button" data-filter="in-progress" class="filter-button" aria-pressed="false">In progress</button>
+          <button type="button" data-filter="done" class="filter-button" aria-pressed="false">Done</button>
+        </nav>
+
+        <ul id="task-list" class="task-list" aria-live="polite"></ul>
+        <p id="empty-state" class="empty-state">Nothing here yet. Add your first task above.</p>
+      </section>
+
+      <footer>Small steps. Real progress.</footer>
+    </main>
+  </body>
+</html>

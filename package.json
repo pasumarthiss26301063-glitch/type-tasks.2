@@ -1,0 +1,13 @@
+{
+  "name": "typetasks-daymark",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Daymark \u2014 a type-safe task tracker built with HTML, CSS and TypeScript",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
